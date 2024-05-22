@@ -5,13 +5,14 @@ import MenuList from './MenuList'
 import ThemeBtn from './ThemeBtn'
 import Logo from './Logo'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route , Navigate} from 'react-router-dom'
 const { Header, Sider, Footer, Content } = Layout
 import Home from './Home'
 import Calculator from './Calculator'
 import Weather from './Weather'
 import Convertor from './Convertor'
 import DragDrop from './DragDrop'
+import Picker from './Picker'
 
 
 function Sidebar() {
@@ -63,11 +64,12 @@ function Sidebar() {
                         }}
                     >
                         <Routes>
-                            <Route path='/' element={<Home />} />
-                            <Route path='/calculator' element={<Calculator />} />
-                            <Route path='/weather' element={<Weather />} />
-                            <Route path='/convertor' element={<Convertor />} />
-                            <Route path='/dragdrop' element={<DragDrop />} />
+                            <Route path='/allProj/' element={<Home />} />
+                            <Route path='/allProj/calculator' element={<Calculator />} />
+                            <Route path='/allProj/weather' element={<Weather />} />
+                            {/* <Route path='/allProj/convertor' element={<Convertor />} /> */}
+                            <Route path='/allProj/dragdrop' element={<DragDrop />} />
+                            <Route path='/allProj/calendar' element={<Picker />} />
                         </Routes>
                     </div>
                 </Content>
